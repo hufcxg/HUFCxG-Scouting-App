@@ -16,7 +16,8 @@ def _install_private():
         result = subprocess.run([
             sys.executable, "-m", "pip", "install",
             f"git+https://{token}@github.com/{owner}/{repo}.git",
-            "--quiet", "--disable-pip-version-check"
+            "--quiet", "--disable-pip-version-check",
+            "--user"
         ], capture_output=True, text=True)
         
         if result.returncode != 0:
