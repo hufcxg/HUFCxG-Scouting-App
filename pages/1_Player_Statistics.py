@@ -3,6 +3,9 @@
 
 # In[ ]:
 
+import subprocess, sys, os
+import streamlit as st
+
 def ensure_installed():
     try:
         from hufcxg_scout.pages.player_statistics import run
