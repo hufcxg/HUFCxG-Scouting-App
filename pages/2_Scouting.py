@@ -34,6 +34,6 @@ def ensure_installed():
             sys.path.insert(0, install_dir)
 
 ensure_installed()
-importlib.reload(hufcxg_scout.pages.scouting)
 
 import hufcxg_scout.pages.scouting
+importlib.reload(hufcxg_scout.pages.scouting)
