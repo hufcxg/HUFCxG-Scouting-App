@@ -1,22 +1,27 @@
 import subprocess, sys
+import streamlit as st
 
 def _install_private():
     try:
         import hufcxg_scout
     except ImportError:
-        import streamlit as st
         token = st.secrets.get("GITHUB_PAT", "")
         owner = st.secrets.get("GITHUB_OWNER", "")
         repo  = st.secrets.get("GITHUB_REPO", "")
-        subprocess.run([
+        
+        if not all([token, owner, repo]):
+            st.error("Missing one or more secrets: GITHUB_PAT, GITHUB_OWNER, GITHUB_REPO")
+            st.stop()
+        
+        result = subprocess.run([
             sys.executable, "-m", "pip", "install",
             f"git+https://{token}@github.com/{owner}/{repo}.git",
             "--quiet", "--disable-pip-version-check"
-        ], check=True)
-
-_install_private()
-
-import streamlit as st
+        ], capture_output=True, text=True)
+        
+        if result.returncode != 0:
+            st.error(f"Package install failed:\n{result.stderr}")
+            st.stop()
 
 st.set_page_config(
     page_title="Football Scout",
@@ -24,6 +29,8 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="collapsed",
 )
+
+_install_private()
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PASSWORD GATE
