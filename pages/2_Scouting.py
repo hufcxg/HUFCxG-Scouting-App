@@ -9,7 +9,7 @@ import streamlit as st
 
 def ensure_installed():
     try:
-        from hufcxg_scout.pages.scouting import run
+        import hufcxg_scout.pages.scouting
     except (ImportError, ModuleNotFoundError):
         token = st.secrets.get("GITHUB_PAT", "")
         owner = st.secrets.get("GITHUB_OWNER", "")
@@ -35,5 +35,4 @@ def ensure_installed():
 
 ensure_installed()
 
-from hufcxg_scout.pages.scouting import run
-run()
+import hufcxg_scout.pages.scouting
