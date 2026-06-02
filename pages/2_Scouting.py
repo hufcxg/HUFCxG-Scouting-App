@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-import subprocess, sys, os
+import subprocess, sys, os, importlib
 import streamlit as st
 
 def ensure_installed():
@@ -34,5 +34,6 @@ def ensure_installed():
             sys.path.insert(0, install_dir)
 
 ensure_installed()
+importlib.reload(hufcxg_scout.pages.scouting)
 
 import hufcxg_scout.pages.scouting
