@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-import subprocess, sys, os
+import subprocess, sys, os, importlib
 import streamlit as st
 
 def ensure_installed():
@@ -35,3 +35,4 @@ def ensure_installed():
 ensure_installed()
 
 import hufcxg_scout.pages.player_statistics
+importlib.reload(hufcxg_scout.pages.player_statistics)
