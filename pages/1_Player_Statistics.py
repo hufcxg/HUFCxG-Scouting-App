@@ -8,7 +8,7 @@ import streamlit as st
 
 def ensure_installed():
     try:
-        from hufcxg_scout.pages.player_statistics import run
+        import hufcxg_scout.pages.player_statistics
     except (ImportError, ModuleNotFoundError):
         token = st.secrets.get("GITHUB_PAT", "")
         owner = st.secrets.get("GITHUB_OWNER", "")
@@ -22,7 +22,7 @@ def ensure_installed():
             f"git+https://{token}@github.com/{owner}/{repo}.git",
             "--target", install_dir,
             "--quiet", "--disable-pip-version-check",
-            "--upgrade",  # force reinstall if partially present
+            "--upgrade",
         ], capture_output=True, text=True)
 
         if result.returncode != 0:
@@ -34,9 +34,4 @@ def ensure_installed():
 
 ensure_installed()
 
-from hufcxg_scout.pages.player_statistics import run
-run()
-
-
-
-
+import hufcxg_scout.pages.player_statistics
