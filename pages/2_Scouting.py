@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import subprocess, sys, os, importlib
 import streamlit as st
 
 def ensure_installed():
     try:
-        import hufcxg_scout.pages.scouting
+        import hufcxg_scout  # just check the package exists, not the page
     except (ImportError, ModuleNotFoundError):
         token = st.secrets.get("GITHUB_PAT", "")
         owner = st.secrets.get("GITHUB_OWNER", "")
