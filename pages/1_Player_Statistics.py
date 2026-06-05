@@ -35,4 +35,4 @@ def ensure_installed():
 ensure_installed()
 
 import hufcxg_scout.pages.player_statistics
-importlib.reload(hufcxg_scout.pages.player_statistics)
+
