@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 import subprocess, sys, os, importlib
 import streamlit as st
 
 def ensure_installed():
     try:
-        import hufcxg_scout.pages.player_statistics
+        import hufcxg_scout  # just check the package exists, not the page
     except (ImportError, ModuleNotFoundError):
         token = st.secrets.get("GITHUB_PAT", "")
         owner = st.secrets.get("GITHUB_OWNER", "")
@@ -34,6 +32,7 @@ def ensure_installed():
 
 ensure_installed()
 
-import hufcxg_scout.pages.player_statistics
-importlib.reload(hufcxg_scout.pages.player_statistics)  
+if "hufcxg_scout.pages.player_statistics" in sys.modules:
+    del sys.modules["hufcxg_scout.pages.player_statistics"]
 
+import hufcxg_scout.pages.player_statistics
