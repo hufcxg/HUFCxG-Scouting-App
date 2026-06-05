@@ -36,4 +36,7 @@ def ensure_installed():
 ensure_installed()
 
 import hufcxg_scout.pages.scouting
-importlib.reload(hufcxg_scout.pages.scouting)  
+
+# Clear so reload executes fresh without duplicate key conflict
+del sys.modules["hufcxg_scout.pages.scouting"]
+importlib.reload(hufcxg_scout.pages.scouting)
