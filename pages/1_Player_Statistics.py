@@ -32,7 +32,5 @@ def ensure_installed():
 
 ensure_installed()
 
-if "hufcxg_scout.pages.player_statistics" in sys.modules:
-    del sys.modules["hufcxg_scout.pages.player_statistics"]
-
+sys.modules.pop("hufcxg_scout.pages.player_statistics", None)
 import hufcxg_scout.pages.player_statistics
