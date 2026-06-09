@@ -32,7 +32,5 @@ def ensure_installed():
 
 ensure_installed()
 
-if "hufcxg_scout.pages.scouting" in sys.modules:
-    del sys.modules["hufcxg_scout.pages.scouting"]
-
+sys.modules.pop("hufcxg_scout.pages.scouting", None)
 import hufcxg_scout.pages.scouting
