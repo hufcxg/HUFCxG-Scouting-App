@@ -116,7 +116,17 @@ st.markdown("""
         justify-content: center;
         text-align: center !important;
     }
-    .nav-card p { color: #8b949e; font-size: 0.85rem; margin: 0; }
+    .nav-card h3 a,
+    .nav-card h3 svg,
+    [data-testid="stHeaderActionElements"] {
+        display: none !important;   /* hide Streamlit's hidden anchor-link icon */
+    }
+    .nav-card p {
+        color: #8b949e;
+        font-size: 0.85rem;
+        margin: 0;
+        padding-top: 1.2rem;        /* pushes description down a line from title */
+    }
 </style>
 """, unsafe_allow_html=True)
 
