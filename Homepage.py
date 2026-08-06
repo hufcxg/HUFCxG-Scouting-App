@@ -162,7 +162,7 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    if st.button("Open Scouting →", use_container_width=True):
+    if st.button("Open Scouting →", use_container_width=True, type="primary"):
         st.switch_page("pages/2_Scouting.py")
 
 with col3:
@@ -175,7 +175,7 @@ with col3:
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
-    if st.button("Open Player Search →", use_container_width=True):
+    if st.button("Open Player Search →", use_container_width=True, type="primary"):
         st.switch_page("pages/3_Player_Search.py")
 
 st.markdown("---")
