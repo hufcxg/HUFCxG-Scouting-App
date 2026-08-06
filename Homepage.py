@@ -104,7 +104,7 @@ st.markdown("# Scouting + Statistics App")
 st.markdown("Select a section to get started.")
 st.markdown("---")
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
@@ -133,6 +133,19 @@ with col2:
     st.markdown("<br>", unsafe_allow_html=True)
     if st.button("Open Scouting →", use_container_width=True):
         st.switch_page("pages/2_Scouting.py")
+
+with col3:
+    st.markdown("""
+    <div class="nav-card">
+        <div class="icon">🔎</div>
+        <h3>Player Search</h3>
+        <p>Filter players by stat ranges across any position group,
+        or rank players by role fit score to find the best matches.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
+    if st.button("Open Player Search →", use_container_width=True):
+        st.switch_page("pages/3_Player_Search.py")
 
 st.markdown("---")
 st.caption("Logged in · [Log out](#)", unsafe_allow_html=True)
