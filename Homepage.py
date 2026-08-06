@@ -159,7 +159,7 @@ with col3:
     st.markdown("""
     <div class="nav-card">
         <div class="icon">🔍</div>
-        <h3>Search</h3>
+        <h3>   Search</h3>
         <p>Filter players by stat ranges across any position group,
         or rank players by role fit score to find the best matches. </p>
     </div>
