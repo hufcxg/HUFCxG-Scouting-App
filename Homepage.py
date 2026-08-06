@@ -94,7 +94,7 @@ st.markdown("""
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 280px;
+        min-height: 285px;
     }
     .nav-card:hover { border-color: #58a6ff; }
     .nav-card .icon {
