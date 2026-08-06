@@ -127,8 +127,7 @@ with col2:
         <h3>Scouting</h3>
         <p>Add players to the
         watchlist and track them through to Scouted then decide on
-        Discard, Potential and Immediate.
-        </p>
+        Discard, Potential and Immediate.</p>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
@@ -141,8 +140,7 @@ with col3:
         <div class="icon">🔍</div>
         <h3>Player Search</h3>
         <p>Filter players by stat ranges across any position group,
-        or rank players by role fit score to find the best matches.
-        
+        or rank players by role fit score to find the best matches.      
         </p>
     </div>
     """, unsafe_allow_html=True)
