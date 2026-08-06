@@ -110,7 +110,7 @@ with col1:
     st.markdown("""
     <div class="nav-card">
         <div class="icon">📊</div>
-        <h3>Player Statistics</h3>
+        <h3>Statistics</h3>
         <p>Percentile ranks, radars, role scores, shot maps,
         similar players and scout notes
         for any player in the dataset.</p>
@@ -126,7 +126,7 @@ with col2:
         <div class="icon">🔍</div>
         <h3>Scouting</h3>
         <p>Add players to the
-        watchlist and track them, then decide on
+        watchlist and track them through to Scouted then decide on
         Discard, Potential and Immediate.</p>
     </div>
     """, unsafe_allow_html=True)
