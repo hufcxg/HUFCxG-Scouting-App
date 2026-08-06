@@ -123,7 +123,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="nav-card">
-        <div class="icon">🔍</div>
+        <div class="icon">📘</div>
         <h3>Scouting</h3>
         <p>Add players to the
         watchlist and track them through to Scouted then decide on
