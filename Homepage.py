@@ -126,7 +126,7 @@ with col2:
         <div class="icon">🔍</div>
         <h3>Scouting</h3>
         <p>Add players to the
-        watchlist and track them through to Scouted then decide on
+        watchlist and track them, then decide on
         Discard, Potential and Immediate.</p>
     </div>
     """, unsafe_allow_html=True)
