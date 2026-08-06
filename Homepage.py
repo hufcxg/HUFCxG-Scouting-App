@@ -157,8 +157,8 @@ with col2:
         <div class="icon">📘</div>
         <h3>Scouting</h3>
         <p>Add players to the
-        watchlist and then decide on
-        Discard, Potential and Immediate.</p>
+        watchlist and then decide whether to tag them
+        Discard, Potential or Immediate.</p>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
