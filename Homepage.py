@@ -94,12 +94,26 @@ st.markdown("""
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 320px;   
+        min-height: 300px;
     }
     .nav-card:hover { border-color: #58a6ff; }
-    .nav-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .nav-card h3    { color: #e2e8f0; margin: 0.4rem 0 0.6rem; }
-    .nav-card p     { color: #8b949e; font-size: 0.85rem; margin: 0; }
+    .nav-card .icon {
+        font-size: 2.5rem;
+        height: 3rem;              /* fixed icon box height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    .nav-card h3 {
+        color: #e2e8f0;
+        margin: 0.4rem 0 0.6rem;
+        height: 1.6rem;            /* fixed title box height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-card p { color: #8b949e; font-size: 0.85rem; margin: 0; }
 </style>
 """, unsafe_allow_html=True)
 
