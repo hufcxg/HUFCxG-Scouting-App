@@ -91,6 +91,10 @@ st.markdown("""
         padding: 2rem 1.5rem;
         text-align: center;
         transition: border-color 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 300px;   
     }
     .nav-card:hover { border-color: #58a6ff; }
     .nav-card .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
