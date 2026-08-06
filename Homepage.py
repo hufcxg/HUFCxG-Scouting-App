@@ -99,19 +99,22 @@ st.markdown("""
     .nav-card:hover { border-color: #58a6ff; }
     .nav-card .icon {
         font-size: 2.5rem;
-        height: 3rem;              /* fixed icon box height */
+        height: 3rem;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 0.5rem;
     }
     .nav-card h3 {
-        color: #e2e8f0;
-        margin: 0.4rem 0 0.6rem;
-        height: 1.6rem;            /* fixed title box height */
-        display: flex;
+        color: #e2e8f0 !important;
+        margin: 0.4rem 0 0.6rem !important;
+        height: 1.6rem;
+        width: 100%;
+        display: flex !important;
         align-items: center;
         justify-content: center;
+        text-align: center !important;
     }
     .nav-card p { color: #8b949e; font-size: 0.85rem; margin: 0; }
 </style>
