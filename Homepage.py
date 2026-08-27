@@ -32,7 +32,7 @@ def _install_private():
             sys.path.insert(0, install_dir)
             
 st.set_page_config(
-    page_title="Football Scout",
+    page_title="HUFCxG App",
     page_icon="",
     layout="centered",
     initial_sidebar_state="collapsed",
